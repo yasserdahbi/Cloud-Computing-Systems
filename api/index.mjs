@@ -1,7 +1,7 @@
 import { createServer } from "./server.mjs";
 
 const server = createServer();
-const port = 3000; 
+const port = 80; 
 
 try {
   await server.listen({ host: "0.0.0.0", port }); 
