@@ -4,7 +4,7 @@
   "main": "index.mjs",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "api:clean": "docker stop feature-api; docker rmi feature/api",
     "api:build": "docker buildx build -f api/Dockerfile -t feature/api .",
     "api:run": "docker run -d --rm --name feature-api --network bridge -p 3000:80 feature/api",
@@ -14,11 +14,14 @@
     "nginx:run": "docker run -d --rm --name feature-nginx  --network bridge -p 8080:8080 feature/nginx",
     "nginx:all": "npm run nginx:clean; npm run nginx:build; npm run nginx:run"
   },
-  "keywords": [], 
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
     "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
