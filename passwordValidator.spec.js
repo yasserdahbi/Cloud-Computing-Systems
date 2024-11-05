@@ -1,7 +1,11 @@
 const isValidatePassword = require("./passwordValidator")
 
 test("Password's length is validate", ()=>{
-    expect(isValidatePassword("asdfrptmtt")).toBe(true);
+    expect(isValidatePassword("asdfrptmtt23")).toBe(true);
     expect(isValidatePassword("zef3")).toBe(false);
-    expect(isValidatePassword("mdlopfmz")).toBe(true);
+});
+
+test("Password contains a digit", ()=>{
+    expect(isValidatePassword("asdfrpt4m3tt")).toBe(true);
+    expect(isValidatePassword("zefrhrhrth")).toBe(false);
 });
