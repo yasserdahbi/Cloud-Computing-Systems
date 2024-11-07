@@ -8,3 +8,5 @@ test("retrieveBalance is called but not executed", ()=>{
     expect(spy).toHaveBeenCalledWith(12345);
     expect(balance).toBe(100);
 });
+
+test()
