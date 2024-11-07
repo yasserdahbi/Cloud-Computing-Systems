@@ -2,7 +2,6 @@
   "name": "api",
   "version": "1.0.0",
   "main": "index.mjs",
-  "type": "module",
   "scripts": {
     "test": "jest",
     "api:clean": "docker stop feature-api; docker rmi feature/api",
